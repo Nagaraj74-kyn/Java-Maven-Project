@@ -41,7 +41,7 @@ jobs:
     
   security-check:
         runs-on: ubuntu-latest
-
+        needs: build
         steps:
         
           - uses: actions/checkout@v4
@@ -54,7 +54,7 @@ jobs:
               sudo apt-get install trivy -y
 
           - name: Trivy FS Scan
-            run: trivy fs --format table -o fs-report.json
+            run: trivy fs --format table -o fs-report.json .
 
           - name: Gitleaks installation
             run: sudo apt install gitleaks -y

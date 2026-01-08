@@ -97,7 +97,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
               name: app-jar
-              path: dist/*.jar
+              path: target/*.jar
             
       - uses: actions/checkout@v4
         with:

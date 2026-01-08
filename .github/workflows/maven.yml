@@ -96,8 +96,8 @@ jobs:
       - name: Upload a whole directory as an artifact
         uses: actions/upload-artifact@v4
         with:
-              name: maven-package
-              path: target/*.jar
+              name: app-jar
+              path: dist/*.jar
             
       - uses: actions/checkout@v4
         with:
@@ -128,7 +128,7 @@ jobs:
       - name: Download a JAR artifact
         uses: actions/download-artifact@v4
         with:
-              name: maven-package
+              name: app-jar
               path: app # this will download JAR in /app folder
 
       - name: Login to Docker Hub

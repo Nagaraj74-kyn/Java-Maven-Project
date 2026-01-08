@@ -63,5 +63,20 @@ jobs:
 
           - name: Gitleaks code scan
             run: gitleaks detect source . -r gitleaks-report-json -f json
+
+  test:
+      runs-on: self-runner
+
+      steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+      - name: test cases
+        run: mvn test
+
             
             

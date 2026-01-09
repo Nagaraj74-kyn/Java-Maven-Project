@@ -145,3 +145,4 @@ jobs:
         with:
           push: true
           tags: nagdocker74/app:latest
+          file: ./Dockerfile

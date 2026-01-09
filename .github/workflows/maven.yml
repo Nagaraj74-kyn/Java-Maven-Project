@@ -121,7 +121,7 @@ jobs:
           
   build_docker_image_and_push:
       runs-on: self-runner
-     # needs: build_project_and_sonar_scan
+      needs: build_project_and_sonar_scan
       steps:
       - uses: actions/checkout@v4
 

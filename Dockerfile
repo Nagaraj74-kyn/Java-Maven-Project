@@ -10,7 +10,7 @@ RUN ls
 
 ENV APP_HOME /usr/src/app
 
-COPY . .
+COPY /app /app
 
 WORKDIR /app
 
